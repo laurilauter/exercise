@@ -1,8 +1,6 @@
 <?php
-
 require('../connection/db_connection.php');
 
-mysqli_select_db($conn, "hospital_db");
 
 $sql = "SELECT
 patient.pn,
@@ -72,7 +70,5 @@ for ($i = 0; $i <= $character_amount_unique - 1; $i++) {
   echo round($percentage_of_characters, 2) . " % \n";
 }
 
-
-$conn->close();
 
 ?>

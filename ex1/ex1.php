@@ -1,7 +1,7 @@
 <?php
 require('../connection/db_connection.php');
 
-// Create database
+// create database
 $sql = "CREATE DATABASE IF NOT EXISTS hospital_db";
 if ($conn->query($sql) === TRUE) {
 
@@ -55,7 +55,7 @@ if ($conn->query($sql) === TRUE) {
     )";
 
     if ($conn->query($sql_insurance) === TRUE) {
-        echo "Table content created > ";
+        echo "Table insurance created > ";
     } else {
         echo "Error creating table: " . $conn->error;
     }
@@ -154,13 +154,9 @@ if ($conn->query($sql) === TRUE) {
         echo "Error creating table: " . $conn->error;
     }
 
-
-
 } else {
     echo "Error creating database: " . $conn->error;
 }
-
-$conn->close();
 
 
 ?>
